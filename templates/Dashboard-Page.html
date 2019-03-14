@@ -5,7 +5,8 @@
     <title>Dashboard Page</title>
 </head>
 <body>
-<h1> <marquee>WELCOME SUBODH WAMAN DUBEY</marquee></h1>
+<h1> <marquee>WELCOME {{ username }}</marquee></h1>
+<form action="http://127.0.0.1:8080/dashboard_logout" method="post">
 <style>h1{
 	color=yellow;
 	font-family:Trebuchet MS;
@@ -17,6 +18,6 @@ body{
 	font-family:comic sans ms ;
 	font-size:20px;
 }</style>
-<form><input type="Submit" name="submit" value="Logout"></form>
+<input type="Submit" name="submit" value="Logout"></form>
 </body>
 </html>
