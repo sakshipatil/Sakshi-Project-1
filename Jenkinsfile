@@ -6,7 +6,7 @@ pipeline {
                 echo "python build"
                 sh 'python --version'
 
-                sh 'python -m pip install -r requirements.txt'
+                sh 'pip3 install -r requirements.txt'
                 echo 'Building..'
             }
         }
