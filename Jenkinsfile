@@ -3,14 +3,16 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh "python bulid"
+                echo "python bulid"
+                bat 'python --version'
 
+                bat 'python -m pip install -r requirements.txt'
+                echo 'Building..'
             }
         }
         stage('Test') {
             steps {
-                sh "python test"
-                bat 'python app.py'
+                echo "python test"
             }
         }
         stage('Deploy') {
