@@ -3,26 +3,18 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo '$PATH'
-                echo 'Hello ..'
-
-                bat 'python --version'
-                bat 'ipconfig'
-                bat 'python -m pip install -r Requirements.txt'
-                echo 'Building..'
+                sh "python bulid"
 
             }
         }
         stage('Test') {
             steps {
-                echo 'Testing..'
-                bat 'python app.py'
+                sh "python test"
             }
         }
         stage('Deploy') {
             steps {
-                echo 'Deploying....'
-                bat 'python app.py'
+               sh "python deploy"
             }
         }
     }
