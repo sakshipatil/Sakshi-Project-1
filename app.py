@@ -1,6 +1,6 @@
 from flask import Flask, request
 from flask import render_template
-from redis import Redis, RedisError
+#from redis import Redis, RedisError
 import os
 import socket
 import pymongo
@@ -16,26 +16,27 @@ mycol = mydb["student"]
 app = Flask(__name__)
 
 # connect a redis
-redis = Redis(host="redis", db=0, socket_connect_timeout=2, socket_timeout=2)
+#redis = Redis(host="redis", db=0, socket_connect_timeout=2, socket_timeout=2)
 
 # a route where we will display a welcome message via an HTML templates
 @app.route("/login")
 def login():
-    try:
-        visits = redis.incr("counter")
-        return render_template('Login-Page.html')
-    except RedisError:
-        visits = "<i>cannot connect to Redis, counter disabled</i>"
-
-    html = "<h3>login {name}!</h3>" \
-           "<b>Hostname:</b> {hostname}<br/>" \
-           "<b>Visits:</b> {visits}"
-    return html.format(name=os.getenv("USERNAME", "project"), hostname=socket.gethostname(), visits=visits)
+    # try:
+    #     visits = redis.incr("counter")
+    return render_template('Login-Page.html')
+    # except RedisError:
+    #     visits = "<i>cannot connect to Redis, counter disabled</i>"
+    #
+    # html = "<h3>login {name}!</h3>" \
+    #        "<b>Hostname:</b> {hostname}<br/>" \
+    #        "<b>Visits:</b> {visits}"
+    # return html.format(name=os.getenv("USERNAME", "project"), hostname=socket.gethostname(), visits=visits)
 
 
 @app.route("/register")
 def register():
     return render_template('Register-Page.html')
+
 
 @app.route("/dashboard")
 def dashboard():
@@ -80,4 +81,4 @@ def dashboard_logout():
 
 # run the application
 if __name__ == "__main__":
-    app.run(host='127.0.0.1',port=8080,debug=True)
+    app.run(host='0.0.0.0',port=80,debug=True)

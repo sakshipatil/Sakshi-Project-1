@@ -1,0 +1,28 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Build') {
+            steps {
+                echo '$PATH'
+                echo 'Hello ..'
+		sh 'ls'
+                bat 'python --version'
+                echo 'Building..'
+
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Testing..'
+                bat 'python app.py'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying....'
+                bat 'python app.py'
+            }
+        }
+    }
+}
