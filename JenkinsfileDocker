@@ -6,7 +6,7 @@ pipeline {
             steps {
                 echo '$PATH'
                 echo 'Hello ..'
-		sh 'ls'
+		        sh 'ls'
                 bat 'python --version'
                 echo 'Building..'
 
