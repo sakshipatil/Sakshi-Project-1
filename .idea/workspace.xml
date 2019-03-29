@@ -63,8 +63,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/JenkinsfileDocker">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="66">
-              <caret line="11" column="47" selection-start-line="11" selection-start-column="47" selection-end-line="11" selection-end-column="47" />
+            <state relative-caret-position="264">
+              <caret line="24" column="25" selection-start-line="24" selection-start-column="25" selection-end-line="24" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -257,7 +257,7 @@
       <window_info id="Favorites" order="0" side_tool="true" />
       <window_info content_ui="combo" id="Project" order="1" sideWeight="0.4987775" visible="true" weight="0.22570533" />
       <window_info id="Structure" order="2" sideWeight="0.5012225" side_tool="true" weight="0.25" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="0" visible="true" weight="0.14332248" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="0" visible="true" weight="0.18241042" />
       <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" />
       <window_info anchor="bottom" id="Python Console" order="2" weight="0.32899022" />
       <window_info anchor="bottom" id="Message" order="3" />
@@ -373,8 +373,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/JenkinsfileDocker">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="11" column="47" selection-start-line="11" selection-start-column="47" selection-end-line="11" selection-end-column="47" />
+        <state relative-caret-position="264">
+          <caret line="24" column="25" selection-start-line="24" selection-start-column="25" selection-end-line="24" selection-end-column="25" />
         </state>
       </provider>
     </entry>

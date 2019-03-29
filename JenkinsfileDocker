@@ -9,7 +9,7 @@ pipeline {
 		        sh 'ls'
                 sh 'python --version'
                 echo 'Building..'
-                sh 'docker build -t project1 .'
+                sh 'sudo docker build -t project1 .'
 
             }
         }
@@ -22,7 +22,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying....'
-                sh 'docker run --name project1 -p 5000:5000 project1'
+                sh 'sudo docker run --name project1 -p 5000:5000 project1'
             }
         }
     }
