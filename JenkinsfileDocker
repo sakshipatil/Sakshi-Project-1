@@ -8,7 +8,6 @@ pipeline {
                 echo 'Hello ..'
 		        sh 'ls'
                 sh 'python --version'
-                sh 'docker info'
                 sh 'docker build -t project1 .'
                 echo 'Building..'
 
