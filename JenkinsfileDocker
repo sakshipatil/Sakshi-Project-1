@@ -4,6 +4,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo '$PATH'
+                echo '$PATH'
                 echo 'Hello ..'
 		        sh 'ls'
                 sh 'python --version'
