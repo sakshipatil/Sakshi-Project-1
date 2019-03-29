@@ -8,6 +8,8 @@ pipeline {
                 echo 'Hello ..'
 		        sh 'ls'
                 sh 'python --version'
+                sh 'docker info'
+                sh 'docker build -t project1 .'
                 echo 'Building..'
 
             }
@@ -21,7 +23,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying....'
-                sh 'python3 app.py'
+                sh 'docker run --name project1 -p 5000:5000 project1'
             }
         }
     }
