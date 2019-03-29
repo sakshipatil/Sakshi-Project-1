@@ -7,7 +7,7 @@ pipeline {
                 echo '$PATH'
                 echo 'Hello ..'
 		        sh 'ls'
-                bat 'python --version'
+                sh 'python --version'
                 echo 'Building..'
 
             }
@@ -15,13 +15,13 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Testing..'
-                bat 'python app.py'
+                sh 'python3 test.py'
             }
         }
         stage('Deploy') {
             steps {
                 echo 'Deploying....'
-                bat 'python app.py'
+                sh 'python3 app.py'
             }
         }
     }
