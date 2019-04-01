@@ -9,7 +9,7 @@ pipeline {
 		        sh 'ls'
                 sh 'python --version'
                 echo 'Building..'
-                sh 'sudo docker build -t project1 -f Dockerfile .'
+                sh 'sudo docker build -t project1 -f "Dockerfile" "."'
 
             }
         }
