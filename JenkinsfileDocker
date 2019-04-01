@@ -9,7 +9,7 @@ pipeline {
 		        sh 'ls'
                 sh 'python --version'
                 echo 'Building..'
-                sh '+ docker build -t bc1f7c45c61f78c45087637422089b4ef2013bc7 -f Dockerfile .'
+                sh 'docker build -t project1 -f "Dockerfile" "."'
 
             }
         }
